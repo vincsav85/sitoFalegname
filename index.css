@@ -1,0 +1,329 @@
+:root{
+    --sfondo: #f9f9f9;
+    --testi: #6B3E2E;
+    --dettagli: rgb(241, 226, 135);
+    --footer: #C29467;
+}
+
+* {
+    box-sizing:border-box;
+}
+
+/* Spazio per il contenitore della testata*/
+
+.contenitore-testata{
+    display:flex;
+    flex-direction:column;
+}
+
+.parte-alta{
+    display:flex;
+    align-items: center;
+    gap:20px;
+    animation: scorrimento-sinistra 1s ease-out;
+    margin-bottom: 30px;
+
+}
+
+.logo-azienda{
+    width: 80px;
+}
+
+.titolo{
+    font-family:"Playfair display", serif;
+    font-style: italic;
+}
+
+.voce-tendina{
+    position: relative;
+
+}
+
+.sottomenu{
+    position: absolute;
+    display:none;
+    text-align: left;
+    border: 1px solid var(--dettagli);
+    border-radius: 10px;
+    background: var(--sfondo);
+    padding: 5px;
+    box-shadow: 2px 2px 4px grey;
+    top:100%;
+    z-index:10;
+    
+}
+
+.voce-tendina:hover .sottomenu{
+    display:flex;
+    flex-direction: column;
+    gap:10px;
+
+}
+
+
+/* Imposto colori base (colori di fondo della pagina) */
+
+body{
+    background: var(--sfondo);
+    font-family: "Open Sans", sans-serif;
+    text-align: center;
+}
+
+section{
+    margin-bottom: 60px;
+}
+
+header{
+    margin-bottom:60px;
+}
+
+
+
+/* Spazio per la sistemazione del header */
+
+nav, .sidebar{
+    font-family: "Playfair Display", serif;
+    background: rgba(242, 193, 193, 0.25);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid var(--dettagli);
+    border-radius: 30px;
+    padding:20px 30px;
+    width: fit-content;
+    margin: 0 auto;
+    display: flex;
+    gap:20px;
+}
+
+nav a, .sidebar a{
+    display: inline-block;
+    text-decoration: none;
+    color:var(--testi);
+    transition: transform 0.4s, text-shadow 0.4s;
+    position: relative;
+    font-family: "IBM plex serif",serif;
+    white-space: nowrap;
+    cursor: default;
+}
+
+nav a::after, .sidebar a::after{
+    content:"";
+    position: absolute;
+    left:0;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background: var(--dettagli);
+    transition: width 0.3s;
+}
+
+nav a:hover, .sidebar a:hover{
+    transform: translateY(-5px);
+    text-shadow: 2px 2px 4px var(--dettagli);
+
+}
+
+nav a:hover::after, .sidebar a:hover::after{
+    width:100%;
+}
+
+
+/* Spazio riservato al layout laterale*/
+
+.layout-prodotti{
+    display:grid;
+    grid-template-columns: 240px 1fr;
+    gap:20px;
+}
+
+.sidebar{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    border:1px solid var(--dettagli);
+    border-radius:10px;
+    position:sticky;
+    top:20px;
+    align-self: start;
+}
+
+
+
+
+
+
+/* Spazio per lo stile e l'organizzazione dei prodotti. */
+
+.quattro-pezzi{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    
+}
+
+.stile-quadro img{
+    width: 100%;
+    display: block;
+}
+
+.foto1 img{
+    animation: scorrimento-sinistra 1.2s ease-out;
+}
+
+.foto2 img{
+    animation: scorrimento-destra 1.2s ease-out;
+}
+
+.foto3{
+    grid-column:2;
+}
+
+.foto3 img{
+    animation: scorrimento-sali 1.2s ease-out;
+}
+
+.testo1, .testo2, .testo3{
+    font-family:"Playfair Display", serif;
+    font-size: 15px;
+    text-align:center;
+    animation: dissolvenza 1.5s;
+}
+
+
+
+.testo2{
+    grid-column:1;
+    grid-row:2;
+}
+
+
+
+
+/* Spazio riserto alle richieste di preventivo */
+
+.contenitore-principale{
+    border: 2px solid var(--dettagli);
+    border-radius: 10px;
+    padding:10px;
+    font-family:"IBM plex serif", serif;
+
+}
+
+.form-preventivo{
+    display:flex;
+    flex-direction:column;
+    gap:25px;
+    padding:10px;
+    width: 100%;
+
+}
+
+.form-preventivo input,
+.form-preventivo textarea,
+.form-preventivo select{
+    width:100%;
+}
+
+
+
+input, select, textarea, button {
+    border: 1px solid var(--dettagli);
+    border-radius:15px;
+    padding:10px;
+    font-family: inherit;
+}
+
+
+
+
+
+/* Spazio riservato agli input e bottoni singoli*/
+
+.invia-richiesta{
+    background: #E07A5F;
+    transition: transform 0.4s;
+}
+
+.invia-richiesta:hover{
+    transform: translateY(-5px);
+    box-shadow: 2px 2px 4px grey;
+}
+
+
+
+
+
+
+/* Spazio dedicato alle animazioni */
+
+@keyframes scorrimento-destra {
+    from {
+        transform: translateX(35px);
+        opacity:0;
+    }
+    to{
+        transform: translateX(0);
+        opacity:1;
+    }
+}
+
+@keyframes scorrimento-sinistra {
+    from {
+        transform: translateX(-35px);
+        opacity:0;
+    }
+    to{
+        transform: translateX(0);
+        opacity:1;
+    }
+}
+
+@keyframes scorrimento-sali {
+    from {
+        transform: translateY(30px);
+        opacity:0;
+    }
+    to{
+        transform: translateY(0px);
+        opacity:1;
+    }
+}
+
+@keyframes dissolvenza{
+    from{opacity:0;}
+    to{opacity:1;}
+}
+
+
+
+/* Da qui comincia la parte dedicata alla galleria delle immagini*/
+
+.immagini-mobili{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:20px;
+    padding:20px;
+}
+
+.foto-dimostrative{
+    border: 3px solid var(--dettagli);
+    border-radius: 10px;
+    overflow:hidden;
+}
+
+.foto-dimostrative img{
+    width: 100%;
+    display:block;
+}
+
+.foto-dimostrative p{
+    width:100%;
+}
+
+.foto-dimostrative{
+    transition: transform 0.4s;
+}
+
+.foto-dimostrative:hover{
+    transform: translateY(-5px) scale(1.05);
+    
+}

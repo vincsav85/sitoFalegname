@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <rect width="400" height="400" fill="#772c2c"/>
+
+  <!-- Cornice sottile a doppio filo -->
+  <circle cx="200" cy="175" r="98" fill="none" stroke="#d4af37" stroke-width="1.2"/>
+  <circle cx="200" cy="175" r="91" fill="none" stroke="#d4af37" stroke-width="0.6"/>
+
+  <!-- Monogramma MM intrecciato -->
+  <text x="178" y="212" text-anchor="middle" font-family="Playfair Display, Didot, Georgia, serif" font-size="108" font-weight="400" fill="#e6ddc5">M</text>
+  <text x="222" y="212" text-anchor="middle" font-family="Playfair Display, Didot, Georgia, serif" font-size="108" font-weight="400" font-style="italic" fill="none" stroke="#d4af37" stroke-width="1.4">M</text>
+
+  <!-- Filetto con rombo -->
+  <line x1="130" y1="312" x2="188" y2="312" stroke="#d4af37" stroke-width="0.8"/>
+  <path d="M200 307 L205 312 L200 317 L195 312 Z" fill="#d4af37"/>
+  <line x1="212" y1="312" x2="270" y2="312" stroke="#d4af37" stroke-width="0.8"/>
+
+  <!-- Nome -->
+  <text x="200" y="345" text-anchor="middle" font-family="Playfair Display, Didot, Georgia, serif" font-size="17" letter-spacing="7" fill="#e6ddc5">MASTRO MARIO</text>
+  <text x="200" y="368" text-anchor="middle" font-family="Open Sans, Arial, sans-serif" font-size="9" letter-spacing="5" fill="#d4af37">BOTTEGA DI FALEGNAMERIA</text>
+</svg>
