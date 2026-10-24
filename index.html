@@ -7,26 +7,31 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Open+Sans:ital,wght@0,300..600;1,300..600&family=Playfair+Display:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="index.css">
-        <title>Sito vetrina per una falegnameria</title>
+        <title>Home - La bottega di mastro Mario</title>
     </head>
 
 <body>
     <header>
+        <div class="banner">
+            <p>Sito dimostrativo creato da Savoca Vincenzo a puro scopo di marketing</p>
+        </div>
         <div class="contenitore-testata">
             <div class="parte-alta">
                 <div class="spazio-logo">
-                    <img src="Immagini/logo-mm.svg" Alt="logo-aziendale" class="logo-azienda">
+                    <img src="Immagini/logo-mm-trasparente.svg" Alt="logo-aziendale" class="logo-azienda">
                 </div>
                 <div class="titolo">
                     <h1>La bottega di mastro Mario</h1>
                 </div>
+                <button class="menu-a-scomparsa" id="bottone-hamburger" aria-label="Apri il menu" aria-expanded="false">☰</button>
             </div>
+            <p>I mobili che desideri, fatti su misura per te a Milano</p>
                 <nav class="menu">
-                    <a href="#hero">Home</a>
+                    <a href="index.html">Home</a>
                     <div class="voce-tendina">
-                        <a href="mobili.html">Prodotti</a>
+                        <button class="bottone-prodotti" aria-expanded="false">Prodotti</button>
                             <div class="sottomenu">
-                                <a href="mobili.html#tutti-i-prodotti">Tutti i prodotti</a>
+                                <a href="mobili.html">Tutti i prodotti</a>
                                 <a href="mobili.html#cabine-armadio">Mobili su misura</a>
                                 <a href="mobili.html#cucine-su-misura">Cucina su misura</a>
                                 <a href="mobili.html#parete-attrezzata">Parete attrezzata</a>
@@ -35,9 +40,8 @@
                             </div>
                     </div>
                     <a href="metodo.html">Il nostro metodo</a>
-                    <a href="#chi-siamo">Chi siamo</a>
-                    <a href="#dove-lavoriamo">Azienda</a>
-                    <a href="#preventivo">Richiedi un preventivo</a>
+                    <a href="chi-siamo.html">Chi siamo</a>
+                    <a href="preventivo.html">Richiedi un preventivo</a>
                 </nav>
         </div>
     </header>
@@ -47,7 +51,7 @@
             </div>
             <div class="stile-quadro testo1">
                 <p>Dalla natura prende forma qualcosa di caldo e 
-                    rilassante, che riempe le tue giornate fredde ed uggiose, 
+                    rilassante, che riempie le tue giornate fredde ed uggiose, 
                     donando alla tua casa un aspetto confortevole ed accogliente.</p>
             </div>
             <div class="stile-quadro foto2"> 
@@ -60,32 +64,26 @@
                 <p>Il calore del legno come madre natura ce lo ha donato.</p>
             </div>
             <div class="stile-quadro testo3">
-                <p>Tutto lavorato con tutta la maestria che mario ha imparato negli anni.</p>
-            </div>
+                <p>Tutto lavorato con tutta la maestria che Mario ha imparato negli anni.</p>
+            </div>    
     </section>        
 
-    <section class="preventivo" id="preventivo">
-        <div class="contenitore-principale">
-            <h1>Richiedi un preventivo</h1>
-                <div class="form-preventivo">
-                    <input type="text" id="nome-e-cognome-preventivo" placeholder="Inserisci qui il tuo nome e cognome">
-                    <input type="text" id="email-preventivo" placeholder="Inserisci la tua mail ">
-                    <input type="number" id="numero-preventivo" placeholder="Inserisci il tuo cellulare">
-                    <input type="text" id="comune-preventivo" placeholder="Inserisci il tuo comune">
-                    <select class="tipologia-lavoro">
-                        <option>Scegli il tipo di lavorazione</option>
-                        <option>Mobili su misura</option>
-                        <option>Cucina su misura</option>
-                        <option>Parete attrezzata</option>
-                        <option>Camerette</option>
-                        <option>Accessori</option>
-                        </select>
-                        <textarea class="spazio-dati" id="area-dati" placeholder="Inserisci messaggio"></textarea>
-                        <button class="invia-richiesta" id="invia-preventivo">Invia la tua richiesta</button>
-                </div>
-        </div>
-
-    </section>
     
+
+<footer>
+    <div class="pie-pagina">
+        <div class="ragione-sociale">
+            <p>La bottega di mastro Mario s.r.l.</p>
+            <p>Via Fadali, 34 20100 Milano (MI)</p>
+            <p>P.IVA: 09809876876 - Cod. SDI : M5UXCR4</p>
+        </div>
+        <div class="contatti">
+            <a class="messaggio" href="https://wa.me/393922353339" target="_blank" rel="noopener">Scrivici su WhatsApp</a>
+            <a class="telefono" href="tel:+393922353339">Cell: 392 2353339</a>
+            <a class="mail" href="mailto:info@vincenzosavoca.com">Mail: info@vincenzosavoca.com</a>
+        </div>
+    </div>
+</footer>
+<script src="menu-tendina.js"></script>
 </body>
 </html>

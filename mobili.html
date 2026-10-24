@@ -7,28 +7,42 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Open+Sans:ital,wght@0,300..600;1,300..600&family=Playfair+Display:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
-    <title>Mobili su misura</title>
+    <title>Mobili - La bottega di mastro Mario</title>
 </head>
 <body>
     <header>
+        <div class="banner">
+            <p>Sito dimostrativo creato da Savoca Vincenzo a puro scopo di marketing</p>
+        </div>
         <div class="contenitore-testata">
             <div class="parte-alta">
                 <div class="spazio-logo">
-                    <img src="Immagini/logo-mm.svg" Alt="logo-aziendale" class="logo-azienda">
+                    <img src="Immagini/logo-mm-trasparente.svg" Alt="logo-aziendale" class="logo-azienda">
                 </div>
                 <div class="titolo">
                     <h1>La bottega di mastro Mario</h1>
                 </div>
+                <button class="menu-a-scomparsa" id="bottone-hamburger" aria-label="Apri il menu" aria-expanded="false">☰</button>
             </div>
 
             <!-- Menu di navigazione -->
             <nav class="menu">
-                <a href="index.html#hero">Home</a>
-                <a href="#il-nostro-metodo">Il nostro metodo</a>
-                <a href="#chi-siamo">Chi siamo</a>
-                <a href="#dove-lavoriamo">Azienda</a>
-                <a href="index.html#preventivo">Richiedi un preventivo</a>
-            </nav>
+                    <a href="index.html">Home</a>
+                    <div class="voce-tendina">
+                        <button class="bottone-prodotti" aria-expanded="false">Prodotti</button>
+                            <div class="sottomenu">
+                                <a href="mobili.html">Tutti i prodotti</a>
+                                <a href="mobili.html#cabine-armadio">Mobili su misura</a>
+                                <a href="mobili.html#cucine-su-misura">Cucina su misura</a>
+                                <a href="mobili.html#parete-attrezzata">Parete attrezzata</a>
+                                <a href="mobili.html#camerette">Camerette</a>
+                                <a href="mobili.html#accessori">Accessori</a>
+                            </div>
+                    </div>
+                    <a href="metodo.html">Il nostro metodo</a>
+                    <a href="chi-siamo.html">Chi siamo</a>
+                    <a href="preventivo.html">Richiedi un preventivo</a>
+                </nav>
         </div>
     </header>
 
@@ -170,7 +184,7 @@
                         <img src="Immagini/mobili/porta-candele.jpg" alt="porta-candele">
                     </div>
                     <div class="immagine">
-                        <p>Letto relaizzato su misura.</p>
+                        <p>Porta candele realizzato su misura.</p>
                     </div>
                 </div>
                 <div class="foto-dimostrative">
@@ -178,7 +192,7 @@
                         <img src="Immagini/mobili/porta-utensili.jpg" alt="porta-utensili">
                     </div>
                     <div class="immagine">
-                        <p>Struttura a ponte realizzata a mano.</p>
+                        <p>Porta utensili da cucina realizzato in legno.</p>
                     </div>
                 </div>
                 <div class="foto-dimostrative">
@@ -186,7 +200,7 @@
                         <img src="Immagini/mobili/fashion-object.jpg" alt="fashion-object">
                     </div>
                     <div class="immagine">
-                        <p>Realizzata su progetto.</p>
+                        <p>Oggetti realizzati su misura per le tue esigenze.</p>
                     </div>
                 </div>
             </section>
@@ -194,5 +208,20 @@
         </main>
     </div>
 
+<footer>
+    <div class="pie-pagina">
+        <div class="ragione-sociale">
+            <p>La bottega di mastro Mario s.r.l.</p>
+            <p>Via Fadali, 34 20100 Milano (MI)</p>
+            <p>P.IVA: 09809876876 - Cod. SDI : M5UXCR4</p>
+        </div>
+        <div class="contatti">
+            <a class="messaggio" href="https://wa.me/393922353339" target="_blank" rel="noopener">Scrivici su WhatsApp</a>
+            <a class="telefono" href="tel:+393922353339">Cell: 392 2353339</a>
+            <a class="mail" href="mailto:info@vincenzosavoca.com">Mail: info@vincenzosavoca.com</a>
+        </div>
+    </div>
+</footer>
+<script src="menu-tendina.js"></script>
 </body>
 </html>

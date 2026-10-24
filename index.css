@@ -5,15 +5,27 @@
     --footer: #C29467;
 }
 
-* {
-    box-sizing:border-box;
-}
+
 
 /* Spazio per il contenitore della testata*/
 
 .contenitore-testata{
+    background-image:linear-gradient(rgba(30, 20, 15, 0.65), rgba(30, 20, 15, 0.65)), url(Immagini/mobili/copertina.jpg);
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
     display:flex;
     flex-direction:column;
+
+}
+
+.contenitore-testata p{
+    color: rgb(255, 223, 223);
+    font-family: "Playfair display", serif;
+    font-style: italic;
+    font-size:20px;
+
+
 }
 
 .parte-alta{
@@ -29,9 +41,10 @@
     width: 80px;
 }
 
-.titolo{
+.titolo h1{
     font-family:"Playfair display", serif;
     font-style: italic;
+    color: rgb(255, 223, 223);
 }
 
 .voce-tendina{
@@ -50,7 +63,6 @@
     box-shadow: 2px 2px 4px grey;
     top:100%;
     z-index:10;
-    
 }
 
 .voce-tendina:hover .sottomenu{
@@ -60,8 +72,16 @@
 
 }
 
+.menu-a-scomparsa{
+    display:none;
+}
 
-/* Imposto colori base (colori di fondo della pagina) */
+/* Imposto colori e titoli base (colori di fondo della pagina) */
+
+* {
+    box-sizing: border-box;
+}
+
 
 body{
     background: var(--sfondo);
@@ -77,15 +97,36 @@ header{
     margin-bottom:60px;
 }
 
+h1{
+    font-family: "Open Sans", sans-serif;
+    font-style: italic;
+}
+
+footer{
+    font-family: "IBM Plex Serif", serif;
+    font-size: 18px;
+    background: var(--footer);
+    padding:8px;
+}
+
+.banner{
+    background: var(--footer);
+    color: white;
+    padding:8px;
+}
+
+.banner p{
+    margin: 0;
+}
 
 
 /* Spazio per la sistemazione del header */
 
 nav, .sidebar{
     font-family: "Playfair Display", serif;
-    background: rgba(242, 193, 193, 0.25);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    background: rgba(242, 193, 193, 0.36);
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);
     border: 1px solid var(--dettagli);
     border-radius: 30px;
     padding:20px 30px;
@@ -93,12 +134,14 @@ nav, .sidebar{
     margin: 0 auto;
     display: flex;
     gap:20px;
+    color: var(--testi);
 }
 
-nav a, .sidebar a{
+nav a, .sidebar a, .bottone-prodotti{
     display: inline-block;
+    font-size:20px;
     text-decoration: none;
-    color:var(--testi);
+    color:rgb(7, 7, 7);
     transition: transform 0.4s, text-shadow 0.4s;
     position: relative;
     font-family: "IBM plex serif",serif;
@@ -106,7 +149,7 @@ nav a, .sidebar a{
     cursor: default;
 }
 
-nav a::after, .sidebar a::after{
+nav a::after, .sidebar a::after, .bottone-prodotti::after{
     content:"";
     position: absolute;
     left:0;
@@ -117,14 +160,23 @@ nav a::after, .sidebar a::after{
     transition: width 0.3s;
 }
 
-nav a:hover, .sidebar a:hover{
+nav a:hover, .sidebar a:hover, .bottone-prodotti:hover{
     transform: translateY(-5px);
     text-shadow: 2px 2px 4px var(--dettagli);
 
 }
 
-nav a:hover::after, .sidebar a:hover::after{
+nav a:hover::after, .sidebar a:hover::after, .bottone-prodotti:hover::after {
     width:100%;
+}
+
+.bottone-prodotti{
+    font-family: "IBM plex serif",serif;
+    font-size:20px;
+    border:none;
+    background: transparent;
+    padding:0;
+    cursor: pointer;
 }
 
 
@@ -146,6 +198,8 @@ nav a:hover::after, .sidebar a:hover::after{
     top:20px;
     align-self: start;
 }
+
+
 
 
 
@@ -205,8 +259,12 @@ nav a:hover::after, .sidebar a:hover::after{
     border-radius: 10px;
     padding:10px;
     font-family:"IBM plex serif", serif;
-
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
 }
+
+
 
 .form-preventivo{
     display:flex;
@@ -214,6 +272,7 @@ nav a:hover::after, .sidebar a:hover::after{
     gap:25px;
     padding:10px;
     width: 100%;
+
 
 }
 
@@ -231,6 +290,36 @@ input, select, textarea, button {
     padding:10px;
     font-family: inherit;
 }
+
+
+/* Spazio riservato al footer */
+
+.pie-pagina{
+    display:flex;
+    padding:10px;
+    gap:5px;
+}
+
+.contatti, .ragione-sociale{
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    padding:10px;
+    gap:10px;
+}
+
+footer p{
+    margin: 0;
+}
+
+.contatti a{
+    text-decoration:none;
+    color:black;
+}
+
+
 
 
 
@@ -295,7 +384,7 @@ input, select, textarea, button {
 
 
 
-/* Da qui comincia la parte dedicata alla galleria delle immagini*/
+/* Da qui comincia la parte dedicata ai prodotti e le loro immagini*/
 
 .immagini-mobili{
     display: grid;
@@ -326,4 +415,202 @@ input, select, textarea, button {
 .foto-dimostrative:hover{
     transform: translateY(-5px) scale(1.05);
     
+}
+
+/* Spazio riservato alla pagina del metodo*/
+
+.metodo{
+    display:flex;
+    align-items: center;
+    gap:10%;
+    border-radius: 10px;
+    overflow:hidden;
+}
+
+.testo, .immagine-metodo{
+    flex:1;
+}
+
+.testo p{
+    font-size: 20px;
+    animation: scorrimento-destra 3s ease-out;
+}
+
+.immagine-metodo img {
+    width:100%;
+    display:block;
+}
+
+  .testo { opacity: 0; }
+  .testo.visibile { animation: scorrimento-destra 1s ease-out forwards; }
+
+
+  .immagine-metodo { opacity: 0; }
+  .immagine-metodo.visibile { animation: scorrimento-sinistra 1s ease-out forwards; }
+
+  /*Sezione dedicata alla pagine Chi Siamo*/
+
+  .azienda{
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto 60px;
+    
+  }
+
+  .organico{
+    border:1px solid var(--dettagli);
+    border-radius: 10px;
+    gap:10px;
+
+  }
+
+  .personale img{
+    width:100%;
+    overflow: hidden;
+    border-radius: 10px;
+
+  }
+
+  /* Spazio riservato al modale per il preventivo*/
+
+#finestra-messaggio{
+    border: 2px solid var(--dettagli);
+    border-radius:10px;
+  }
+#finestra-messaggio::backdrop{
+    background: rgba(30, 20, 15, 0.3);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+
+/*Spazio per la media query*/
+
+@media (max-width: 768px){
+
+    .layout-prodotti{
+        grid-template-columns: 1fr;
+    }
+
+    .immagini-mobili{
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar{
+        display:none;
+    }
+
+    nav a, .sidebar a{
+        font-size:18px;
+    }
+
+    .menu{
+        display:none;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 5px;
+        padding:10px 20px;    
+    }
+
+    .contenitore-testata{
+        position:relative;
+    }
+
+    nav{
+        position:absolute;
+        top:100%;
+        right:0;
+        z-index:10;
+        background: var(--sfondo);
+    }
+
+    .menu.aperto{
+        display:grid;
+    }
+
+    .metodo{
+        display:grid;
+        grid-template-columns: repeat(1,1fr);
+        gap:20px;
+    }
+
+    .quattro-pezzi{
+        grid-template-columns: repeat(1, 1fr);
+
+    }
+
+    header{
+        margin-bottom: 20px;
+    }
+
+
+    .foto3{
+        grid-column: auto;
+        grid-row: auto;
+    }
+
+    .testo2{
+        grid-column: auto;
+        grid-row: 4;
+    } 
+    
+    .bottone-prodotti{
+        color: black;
+        border:none;
+        background: transparent;
+        font-family: "IBM plex serif",serif;
+        font-size:18px;
+        padding:1px;
+
+    }
+
+    .sottomenu{
+        position:static;
+        border:none;
+        text-align:center;
+        box-shadow: 1px 1px 2px grey;
+    }
+
+    .sottomenu a{
+        font-size:14px;
+    }
+
+    .voce-tendina:hover .sottomenu{
+        display:none;
+    }
+
+    .voce-tendina .sottomenu.aperto{
+        display:flex;
+        flex-direction: column;
+        gap:10px;
+    }
+
+    #bottone-hamburger, .menu-a-scomparsa{
+        display:flex;
+        flex-shrink:0;
+        width:44px;
+        height:44px;
+        font-size:20px;
+        padding:10px;
+        background: var(--sfondo);
+        color:black;
+        align-items:center;
+        justify-content:center;
+
+    }
+
+    .pie-pagina{
+        flex-direction: column;
+    }
+
+
+    .contatti{
+        order:-1;
+    }
+
+    .ragione-sociale{
+        font-size:14px;
+    }
+
 }

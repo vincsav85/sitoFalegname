@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Open+Sans:ital,wght@0,300..600;1,300..600&family=Playfair+Display:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <title>Chi siamo - La bottega di mastro Mario</title>
+</head>
+
+
+<body>
+    <header>
+        <div class="banner">
+            <p>Sito dimostrativo creato da Savoca Vincenzo a puro scopo di marketing</p>
+        </div>
+        <div class="contenitore-testata">
+                <div class="parte-alta">
+                    <div class="spazio-logo">
+                        <img src="Immagini/logo-mm-trasparente.svg" Alt="logo-aziendale" class="logo-azienda">
+                    </div>
+                    <div class="titolo">
+                        <h1>La bottega di mastro Mario</h1>
+                    </div>
+                    <button class="menu-a-scomparsa" id="bottone-hamburger" aria-label="Apri il menu" aria-expanded="false">☰</button>
+                </div>
+
+                <!-- Menu di navigazione -->
+                <nav class="menu">
+                    <a href="index.html">Home</a>
+                    <div class="voce-tendina">
+                        <button class="bottone-prodotti" aria-expanded="false">Prodotti</button>
+                            <div class="sottomenu">
+                                <a href="mobili.html">Tutti i prodotti</a>
+                                <a href="mobili.html#cabine-armadio">Mobili su misura</a>
+                                <a href="mobili.html#cucine-su-misura">Cucina su misura</a>
+                                <a href="mobili.html#parete-attrezzata">Parete attrezzata</a>
+                                <a href="mobili.html#camerette">Camerette</a>
+                                <a href="mobili.html#accessori">Accessori</a>
+                            </div>
+                    </div>
+                    <a href="metodo.html">Il nostro metodo</a>
+                    <a href="chi-siamo.html">Chi siamo</a>
+                    <a href="preventivo.html">Richiedi un preventivo</a>
+                </nav>
+        </div>
+    </header>
+
+<section class="azienda">
+    
+    <h1>Mastro Mario: il titolare</h1>
+        <div class="organico">
+            <div class="personale">
+                <img src="Immagini/mario.jpg" alt="Mario">
+            </div>
+            <div class="testo-a">
+                <p>La storia comincia nel lontano 1980 quando Mario decide di aprire un piccolo laboratorio. Con il
+                    passare del tempo le commesse aumentano, i clienti tornano perché piace il lavoro di Mario. Ed in men che 
+                    non si dice Mario è passato da avere solo un collaboratore, ad averne 3, ognuno con una specializzazione 
+                    diversa. </p>
+            </div>
+        </div>
+    <h1>Giovanni: il primo collaboratore</h1>
+        <div class="organico">    
+            <div class="personale">
+                <img src="Immagini/giovanni.jpg" alt="Giovanni">
+            </div>
+            <div class="testo-a">
+                <p>Primo collaboratore in assoluto di mastro Mario, Giovanni arriva in officina appena uscito
+                dalla scuola. Con la pazienza e la tenacia che lo contraddistinguono, è diventato il braccio destro di Mario.
+                </p>
+            </div>
+        </div>
+
+    <h1>Vincenzo: il progettista</h1>
+        <div class="organico">
+            <div class="personale">
+                <img src="Immagini/vincenzo.jpg" alt="Vincenzo"
+            </div>
+            <div class="testo-a">
+                <p>Con il passare degli anni il mondo corre e Mario si rende conto che i progetti su carta 
+                oramai stanno diventando uno strumento vecchio. Bisognava aggiornarsi, ed ecco che entra in gioco Vincenzo. 
+                Con la sua capacità di utilizzare il computer porta la bottega in condizioni di competere con le migliori aziende del
+                settore utilizzando le più moderne tecnologie.
+                </p>
+            </div>
+        </div>    
+</section>
+
+<footer>
+    <div class="pie-pagina">
+        <div class="ragione-sociale">
+            <p>La bottega di mastro Mario s.r.l.</p>
+            <p>Via Fadali, 34 20100 Milano (MI)</p>
+            <p>P.IVA: 09809876876 - Cod. SDI : M5UXCR4</p>
+        </div>
+        <div class="contatti">
+            <a class="messaggio" href="https://wa.me/393922353339" target="_blank" rel="noopener">Scrivici su WhatsApp</a>
+            <a class="telefono" href="tel:+393922353339">Cell: 392 2353339</a>
+            <a class="mail" href="mailto:info@vincenzosavoca.com">Mail: info@vincenzosavoca.com</a>
+        </div>
+    </div>
+</footer>
+
+<script src="menu-tendina.js"></script>
+</body>
+</html>

@@ -7,28 +7,100 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Open+Sans:ital,wght@0,300..600;1,300..600&family=Playfair+Display:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
-    <title>Mobili su misura</title>
+    <title>Metodo - La bottega di mastro Mario</title>
 </head>
+
 <body>
-    <div class="contenitore-testata">
-            <div class="parte-alta">
-                <div class="spazio-logo">
-                    <img src="Immagini/logo-mm.svg" Alt="logo-aziendale" class="logo-azienda">
-                </div>
-                <div class="titolo">
-                    <h1>La bottega di mastro Mario</h1>
-                </div>
-            </div>
-
-            <!-- Menu di navigazione -->
-            <nav class="menu">
-                <a href="index.html#hero">Home</a>
-                <a href="mobili.html">Prodotti</a>
-                <a href="#chi-siamo">Chi siamo</a>
-                <a href="#dove-lavoriamo">Azienda</a>
-                <a href="index.html#preventivo">Richiedi un preventivo</a>
-            </nav>
+    <header>
+        <div class="banner">
+            <p>Sito dimostrativo creato da Savoca Vincenzo a puro scopo di marketing</p>
         </div>
+        <div class="contenitore-testata">
+                <div class="parte-alta">
+                    <div class="spazio-logo">
+                        <img src="Immagini/logo-mm-trasparente.svg" Alt="logo-aziendale" class="logo-azienda">
+                    </div>
+                    <div class="titolo">
+                        <h1>La bottega di mastro Mario</h1>
+                    </div>
+                    <button class="menu-a-scomparsa" id="bottone-hamburger" aria-label="Apri il menu" aria-expanded="false">☰</button>
+                </div>
 
+                <!-- Menu di navigazione -->
+                <nav class="menu">
+                    <a href="index.html">Home</a>
+                    <div class="voce-tendina">
+                        <button class="bottone-prodotti" aria-expanded="false">Prodotti</button>
+                            <div class="sottomenu">
+                                <a href="mobili.html">Tutti i prodotti</a>
+                                <a href="mobili.html#cabine-armadio">Mobili su misura</a>
+                                <a href="mobili.html#cucine-su-misura">Cucina su misura</a>
+                                <a href="mobili.html#parete-attrezzata">Parete attrezzata</a>
+                                <a href="mobili.html#camerette">Camerette</a>
+                                <a href="mobili.html#accessori">Accessori</a>
+                            </div>
+                    </div>
+                    <a href="metodo.html">Il nostro metodo</a>
+                    <a href="chi-siamo.html">Chi siamo</a>
+                    <a href="preventivo.html">Richiedi un preventivo</a>
+                </nav>
+            </div>
+    </header>
+    
+    
+<!--Parte riservata al corpo della pagina, con sezioni divise-->
+<h1>Fase 1: la visita sul luogo</h1>
+<section class="metodo">
+    
+    <div class="testo">
+        <p>La fase iniziale prevede un sopralluogo, la misurazione degli spazi utilizzabili e 
+            la realizzazione del primo schizzo del mobile.
+        </p>
+    </div>
+    <div class="immagine-metodo">
+        <img src="Immagini/mobili/progetto2.jpg" alt="Schizzo a matita">
+    </div>
+</section>
+
+<h1>Fase 2: la digitalizzazione delle immagini</h1>
+<section class="metodo">
+    <div class="immagine-metodo">
+        <img src="Immagini/mobili/progetto1.jpg" alt="Foto del progetto ufficiale">
+    </div>
+    <div class="testo">
+        <p>Dopo l'analisi lo schizzo del progetto diventa un progetto computerizzato realizzato 
+            con l'ausilio dell'AI e delle tecniche dei nostri esperti.
+        </p>
+    </div>
+</section>
+
+<h1>Fase 3: dalla carta alla realtà</h1>
+<section class="metodo">
+    <div class="testo">
+        <p>Nella fase finale tutto quello che è realizzato su carta prende vita e diventa un mobile
+            solido e duraturo nel tempo.
+        </p>
+    </div>
+    <div class="immagine-metodo">
+        <img src="Immagini/mobili/progetto3.jpg" alt="Foto di un falegname al lavoro">
+    </div>
+</section>
+
+<footer>
+    <div class="pie-pagina">
+        <div class="ragione-sociale">
+            <p>La bottega di mastro Mario s.r.l.</p>
+            <p>Via Fadali, 34 20100 Milano (MI)</p>
+            <p>P.IVA: 09809876876 - Cod. SDI : M5UXCR4</p>
+        </div>
+        <div class="contatti">
+            <a class="messaggio" href="https://wa.me/393922353339" target="_blank" rel="noopener">Scrivici su WhatsApp</a>
+            <a class="telefono" href="tel:+393922353339">Cell: 392 2353339</a>
+            <a class="mail" href="mailto:info@vincenzosavoca.com">Mail: info@vincenzosavoca.com</a>
+        </div>
+    </div>
+</footer>
+<script src="ritardo.js"></script>
+<script src="menu-tendina.js"></script>
 </body>
 </html>
