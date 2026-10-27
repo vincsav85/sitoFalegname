@@ -9,6 +9,7 @@
 
 /* Spazio per il contenitore della testata*/
 
+
 .contenitore-testata{
     background-image:linear-gradient(rgba(30, 20, 15, 0.65), rgba(30, 20, 15, 0.65)), url(Immagini/mobili/copertina.jpg);
     background-size:cover;
@@ -87,6 +88,7 @@ body{
     background: var(--sfondo);
     font-family: "Open Sans", sans-serif;
     text-align: center;
+    overflow:clip;
 }
 
 section{
