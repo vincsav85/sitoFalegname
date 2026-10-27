@@ -5,6 +5,9 @@
     --footer: #C29467;
 }
 
+html{
+    overflow-x: clip;
+}
 
 
 /* Spazio per il contenitore della testata*/
@@ -88,7 +91,7 @@ body{
     background: var(--sfondo);
     font-family: "Open Sans", sans-serif;
     text-align: center;
-    overflow:clip;
+    overflow-x:clip;
 }
 
 section{
